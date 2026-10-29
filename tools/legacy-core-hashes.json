@@ -1,0 +1,104 @@
+{
+  "AGENTS.md": [
+    "1f64dabe072d5c3f9c8c0f67e11842beaf64b7bbf6f8d811913da871d22f6ea4",
+    "ae8bef95b5e8940bc3329ce662b347be34cbffa4c33d2be9da721555930e8232"
+  ],
+  "CLAUDE.md": [
+    "638e938130ef78d66d57e2975553900c4deb4a1e87933dd627e9f0d2b50a4846"
+  ],
+  "VERSION": [
+    "cb076e07325702a48d55cd601686bee07d6123cf364998a8da44c8e08b6f2fdc",
+    "db0d0212226e00bee3d77e29b59c131abb853b6d3867996ffc831aa6f0529fd9"
+  ],
+  "core.manifest": [
+    "f5f495fd2e37f6f2192a40d41e51da0963977afbabbfb223d6d96db3ee634d8a"
+  ],
+  "docs/manual-uso-biank.md": [
+    "0dc45ffc177968e169117a35bc7784ec44b4e283d22f42591e5929b1961b69b4"
+  ],
+  "identity/BIANK.md": [
+    "2583cad81b04322006788b98a72ac49f565e45af676164b2d0dd630e0735e852",
+    "c0f9152ed37377d7cb3239b012dfd263756a2a2ddfcb49a53d1ea387cd4a0290"
+  ],
+  "protocols/crear-flujo.md": [
+    "789fe92c56a951360885db691046d095c305ba5586d7ccebecef2f73b4cea092"
+  ],
+  "protocols/receipt_capture.md": [
+    "0bbc8f5ebd5ad86e6a8e68f9264ec112347ddc569b79b16f0e1354ff8ca44eb8"
+  ],
+  "scripts/file_index.py": [
+    "50986dff68a6449179d735813f82b71379c9b16d2df7a1a280884a3561ba9e72"
+  ],
+  "scripts/update.py": [
+    "bbbb5d171a0179753eb50009b118131afcfb9b370f4e748976386006db439862",
+    "d0396963d58d1b6707e1b8a9faadc8c625692f9e9441a2153629c8ec37f8d91e"
+  ],
+  "scripts/validate_okf.py": [
+    "2b38d9c06dd5c8b094b9654287a4ad0339423343fb2089bcee0bbca522cfddd5"
+  ],
+  "setup.bat": [
+    "a745e8aa09a2ad8e70deae8c5e54524383860e25a4426331915b65c39c525734"
+  ],
+  "setup.ps1": [
+    "ee485a4efa6d12af99eefbfba5b7f9f245208d14a6b4a915731a3fccbb9db64c"
+  ],
+  "setup.py": [
+    "792e591266f46af0d767bef4df89018fbca510808e5d668bb999819fb51f1726"
+  ],
+  "setup.sh": [
+    "5773ffee268d7c11afc850194fe9ac5e822f717bfad278151c875a193a32f605"
+  ],
+  "skills/INDEX.md": [
+    "f718c6a14b208f7483462d559e9d5ca19b77c53f21aab62a2ab415a52d2b2e5f"
+  ],
+  "skills/actualizarme.md": [
+    "cc656cb4c8ccc9db1ce5348c22b5d14023f3d2edc441424f9bf158d19e01a29c"
+  ],
+  "skills/buscar-archivo.md": [
+    "62a1010a713c5405773f4b1d0c33f2590731b81209e3029c38a6e30b41a93886"
+  ],
+  "skills/conectar-cbsuite.md": [
+    "316dafc9b9147fecbaa8c42ad4cfe26ada9b4c4a9bf65d0c6a6f7de5eacadc22",
+    "45c90984e1f89070ee8f376aabd3eb7d52124189aad74d4d7bbf944cd50718c7"
+  ],
+  "skills/conectar-google.md": [
+    "347efd97d70dfdd86a8b46bedc39445b8324adfb2b693e7b515427ce6ad9ba22",
+    "4d81c79b7074935df9d3471608b7950903afaef80864bb191a631df37f51d563"
+  ],
+  "skills/consultar-caja.md": [
+    "5cc31bee53027d7d42b963a5022a8d0157f6e21309ee294cbc170edf258d9756"
+  ],
+  "skills/consultar-clientes.md": [
+    "77a512f4db904b3912fc8fd4fc24b1c8a186cd672de8c062c275dc12647e9381"
+  ],
+  "skills/consultar-cobranza.md": [
+    "912565c97a946f4465a3edaead1ac8b0c6d6ba9704aadc28046e93df74294ec2"
+  ],
+  "skills/consultar-compras.md": [
+    "340331123dfb5f0ed59cdcef817bbf1d53a87322a6c4b11b060e106de2880cd1"
+  ],
+  "skills/consultar-inventario.md": [
+    "2e1c27531ccd9d0ae1e53bc186ba62e05ec13f36c1b297f5d79a7c45038a0089"
+  ],
+  "skills/consultar-ventas.md": [
+    "6a1ddcb276651617a4e81610e74ce9289c0d1f17617f44a5d5f7535fba1cf382"
+  ],
+  "skills/diagnostico.md": [
+    "570f65eaf5c5434b1ae1294f3d3776a5a09a3519b56617a8c066a74d621d4226"
+  ],
+  "skills/gestion-manuales.md": [
+    "d13332cab78eb6aa1babdc71015d417ee189976be4b0e9a8864655c83880a2a6"
+  ],
+  "skills/instrucciones.md": [
+    "d287d16bfba8494608e405841ef1f81eae22beb375a9515426f685428962ae79"
+  ],
+  "skills/registrar-abono.md": [
+    "721d824e90099ec939a02b2c573dd693071b03ea879a0e75827cc3406f0a6708"
+  ],
+  "skills/reportar-soporte.md": [
+    "ec312e3ea95e11c7172a8c9aeca094f01ad9c50a119424b49050c915326e9d0c"
+  ],
+  "skills/revision-semanal.md": [
+    "47038f0432bd6ad9b670c766b4c1b6b9e4d659e9f725a768db01f0ada6542ecf"
+  ]
+}

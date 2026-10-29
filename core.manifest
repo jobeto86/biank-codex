@@ -1,0 +1,39 @@
+# core.manifest — Archivos del core genérico distribuible (TSK-634)
+# Una ruta relativa por línea; líneas vacías y comentarios se ignoran.
+# VERSION y los metadatos de integridad se gestionan al empaquetar.
+# Nunca incluir memoria, config, manuales, entregables, credenciales,
+# .env, .mcp.json ni configuración del arnés.
+# Los archivos propios fuera de este manifiesto no se distribuyen ni sustituyen.
+
+CLAUDE.md
+AGENTS.md
+identity/BIANK.md
+protocols/crear-flujo.md
+protocols/receipt_capture.md
+scripts/file_index.py
+scripts/update.py
+scripts/validate_okf.py
+setup.bat
+setup.ps1
+setup.py
+setup.sh
+skills/INDEX.md
+skills/gestion-manuales.md
+skills/buscar-archivo.md
+skills/actualizarme.md
+skills/conectar-cbsuite.md
+skills/conectar-google.md
+skills/consultar-caja.md
+skills/consultar-clientes.md
+skills/consultar-cobranza.md
+skills/consultar-compras.md
+skills/consultar-inventario.md
+skills/consultar-ventas.md
+skills/diagnostico.md
+skills/instrucciones.md
+skills/registrar-abono.md
+skills/reportar-soporte.md
+skills/revision-semanal.md
+README.md
+docs/distribucion-github.md
+docs/manual-uso-biank.md

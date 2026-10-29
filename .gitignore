@@ -1,0 +1,14 @@
+.env*
+.mcp.json
+.claude/
+.gemini/
+memory/
+config/
+manuales/
+entregables/
+__pycache__/
+*.pyc
+dist/
+.biank-release.json
+.biank-installed.json
+.biank-update*
