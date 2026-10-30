@@ -30,6 +30,25 @@ Documentación: `docs/distribucion-github.md` y `docs/manual-uso-biank.md`.
 
 La publicación se verifica por su release, su ZIP y las huellas del paquete; tener estos archivos no demuestra que una carpeta de usuario ya se haya actualizado. Linux ARM64 se verifica con pruebas automatizadas; Windows y macOS requieren su propia comprobación.
 
+## Continuidad por tareas
+
+`memory/backlog.md` concentra los pendientes con responsable, próximo paso, fecha,
+decisiones y evidencia de cierre. Se actualiza la tarea existente, sin crear una
+bitácora o resumen obligatorio de cada conversación y sin esperar una despedida.
+La memoria nativa del arnés es un apoyo opcional, no una fuente portable compartida.
+
+`memory/context.md` es opcional y su contenido completo se limita a **4096 bytes
+UTF-8**, medidos antes de guardar. Sólo conserva preferencias confirmadas y hechos
+duraderos comunes a varias tareas, con fecha, origen y vigencia cuando corresponda;
+no duplica pendientes, reglas, manuales, datos del ERP ni secretos. La consolidación
+y comprobación las realiza el agente conforme a sus instrucciones; el instalador
+no recorta ni modifica memoria local.
+
+Las sesiones y otros antecedentes existentes se preservan sin migración automática.
+Un contexto legado que exceda el límite se conserva y se consulta selectivamente;
+se propone consolidarlo sin pérdida antes de reemplazarlo. No bloquea las operaciones.
+No se requieren hooks ni se crean notificaciones de fondo al anotar una fecha.
+
 ## Descargar
 
 [Descargar la carpeta Biank](https://github.com/jobeto86/biank-codex/releases/latest/download/biank-core.zip). Usa ese archivo adjunto de la release; el ZIP automático de código fuente de GitHub no es el instalador. Descomprime en una carpeta nueva y ábrela en Codex.

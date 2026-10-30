@@ -11,8 +11,8 @@
 | `conectar-google` | "conectar google maps", "mcp maps", "conectar calendar/gmail" | Comprueba las conexiones autorizadas que el arnés realmente ofrece y guía el consentimiento fuera del chat. |
 | `actualizarme` | "actualízate", "¿hay versión nueva?", "¿estás al día?" | Consulta o aplica releases verificadas de GitHub; conserva contenido local y reporta el resultado real. |
 | `diagnostico` | "algo no funciona", "no jala", "diagnóstico", "revisa tu instalación", errores repetidos de tools/conexión | Comprueba versión, archivos del core y conexiones reales sin alterar credenciales ni datos. |
-| `revision-semanal` | "revisión semanal", "audítate", "¿qué aprendiste esta semana?", o proactiva si pasaron 7+ días | Auto-auditoría: archiva cerrados, revisa vencidos/estancados, **caza trabajo repetitivo** (3+ veces) y propone convertirlo en habilidad nueva (aprueba el admin). |
-| `instrucciones` | "ayuda", "¿qué puedes hacer?", "comandos", primera sesión | Presenta capacidades, frases de inicio/cierre, cómo pedir flujos nuevos |
+| `revision-semanal` | "revisión semanal", "audítate", "¿qué aprendiste esta semana?", o proactiva si pasaron 7+ días | Revisa tareas y sus referencias: archiva cerrados, revisa vencidos/estancados y propone flujos con repetición comprobada (3+ veces, aprueba el admin); fecha de revisión en el backlog. |
+| `instrucciones` | "ayuda", "¿qué puedes hacer?", "comandos", primera apertura sin usuarios registrados | Presenta capacidades, arranque y continuidad por tareas sin despedida obligatoria; cómo pedir flujos nuevos |
 | `consultar-ventas` | "¿cuánto vendimos?", "busca la venta de [cliente]", "ventas de hoy/semana" | Lista ventas con filtros, muestra detalle, saldos pendientes |
 | `consultar-clientes` | "busca a [cliente]", "¿cuánto debe [cliente]?", "estado de cuenta" | Búsqueda de clientes, saldo, historial, línea de crédito |
 | `consultar-inventario` | "¿cuánto hay de [producto]?", "stock actual", "productos críticos" | Existencias por producto, historial, alertas de stock bajo |

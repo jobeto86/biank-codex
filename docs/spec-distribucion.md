@@ -12,6 +12,14 @@ Aprobado en TSK-634, 2026-10-29. Sustituye la distribución del core por MCP; no
 | BCG-06 | Instalación idempotente validada antes de marcar éxito; no crear ni cambiar credenciales o configuración del arnés. | Instalación de ZIP real, repetición y origen corrupto/same-version incompleto. |
 | BCG-07 | Migración desde contenido genérico conocido por huella, sin adoptar archivos locales desconocidos. | legacyFiles y prueba positiva/negativa de migración. |
 | BCG-08 | Primera apertura: instalar y actualizar; después releer identidad/índice. Red caída conserva versión local; journal pendiente bloquea operaciones hasta recuperar. | Instrucciones AGENTS y pruebas de recuperación. |
+| BCG-09 | El backlog conserva tareas, responsable, próximo paso/fecha, decisiones relevantes y evidencia de cierre. Se actualiza la tarea existente; no se crea otra por cada conversación ni por operaciones completadas dentro del turno. | Revisión de identidad, bienvenida, revisión semanal y manual. |
+| BCG-10 | No se exige crear, cargar ni cerrar resúmenes de sesiones; no depende de despedidas ni hooks. Historial del arnés para conversación, archivos anteriores sólo como antecedentes cuando sean necesarios. | Auditoría de instrucciones y preservación de sesiones y marcadores anteriores al actualizar. |
+| BCG-11 | Contexto local opcional, máximo 4096 bytes UTF-8 contando todo el archivo: preferencias confirmadas, hechos duraderos y convenciones que aplican a varias tareas, con fecha, origen y vigencia cuando aplique. Sin duplicar reglas, tareas, historial, manuales, ERP ni secretos. Consolidar y medir antes de guardar; no truncar ni borrar contexto anterior que exceda el límite. | Revisión de instrucciones y preservación byte a byte de memoria anterior sobredimensionada durante una actualización. |
+| BCG-12 | Guardar continuidad al confirmar resultados/decisiones, sin esperar al cierre ni interponer registros en la operación. Memoria nativa sólo como apoyo opcional; no se presume compartida entre arneses. Sin recordatorios en segundo plano salvo programación confirmada. | Auditoría de drift entre arranque, identidad, skills y documentación. |
+
+BCG-09..12: cambio de continuidad autorizado directamente por Roberto en esta conversación,
+2026-10-29 («Adelante»), tras aprobar backlog y memoria breve sin bitácora obligatoria.
+No autoriza eliminar ni migrar automáticamente datos históricos del usuario.
 
 GitHub distribuye el núcleo; la conexión nativa MCP conserva la autenticación y los permisos del ERP. Compartir cuenta del arnés no identifica al usuario CBSuite ni demuestra aislamiento entre personas.
 

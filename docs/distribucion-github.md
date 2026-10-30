@@ -30,6 +30,25 @@ Una actualización sólo avanza de versión y sólo administra los paths del cor
 
 Compartir una cuenta del proveedor de modelos no garantiza aislamiento entre carpetas ni sustituye la autenticación de cada persona en CBSuite. El agente verifica perfil, membresías y tenant antes de operar con el MCP.
 
+## Continuidad por tareas
+
+`memory/backlog.md` concentra los pendientes con responsable, próximo paso, fecha,
+decisiones y evidencia de cierre. Se actualiza la tarea existente, sin crear una
+bitácora o resumen obligatorio de cada conversación y sin esperar una despedida.
+La memoria nativa del arnés es un apoyo opcional, no una fuente portable compartida.
+
+`memory/context.md` es opcional y su contenido completo se limita a **4096 bytes
+UTF-8**, medidos antes de guardar. Sólo conserva preferencias confirmadas y hechos
+duraderos comunes a varias tareas, con fecha, origen y vigencia cuando corresponda;
+no duplica pendientes, reglas, manuales, datos del ERP ni secretos. La consolidación
+y comprobación las realiza el agente conforme a sus instrucciones; el instalador
+no recorta ni modifica memoria local.
+
+Las sesiones y otros antecedentes existentes se preservan sin migración automática.
+Un contexto legado que exceda el límite se conserva y se consulta selectivamente;
+se propone consolidarlo sin pérdida antes de reemplazarlo. No bloquea las operaciones.
+No se requieren hooks ni se crean notificaciones de fondo al anotar una fecha.
+
 ## Compatibilidad y evidencia
 
 Python usa biblioteca estándar. Sólo se declara una instalación o actualización correcta con evidencia del instalador y del actualizador. Una prueba en un sistema operativo no certifica automáticamente los demás arneses o plataformas.

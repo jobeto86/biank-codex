@@ -114,7 +114,12 @@ class DistributionTest(unittest.TestCase):
         for company in ['one', 'two']:
             self.workspace = Path(self.temp.name) / company
             self.installed()
-            local = {'memory/context.md': company.encode(), 'config/users.md': b'local config',
+            local = {'memory/context.md': (company + ' memoria anterior áéíóú\n').encode('utf-8') * 300,
+                     'memory/backlog.md': b'open task | owner | next step | evidence',
+                     'memory/backlog_archivo.md': b'closed task | decision | receipt',
+                     'memory/sessions/2026-10-28_previous.md': b'legacy session evidence',
+                     'memory/sessions/.session_incomplete': b'legacy marker',
+                     'config/users.md': b'local config',
                      'manuales/process.md': b'local manual', '.env': b'synthetic fixture',
                      '.mcp.json': b'{"local": true}', 'skills/custom.md': b'own skill'}
             for name, content in local.items():

@@ -1,12 +1,12 @@
 ---
 name: instrucciones
-description: "Presentar capacidades de Biank, frases de inicio/cierre y como pedir flujos nuevos. Triggers: 'ayuda', 'que puedes hacer', 'comandos', 'instrucciones', 'como funciona esto', o primera sesion (memory/sessions/ vacio)."
+description: "Presentar capacidades de Biank, arranque y seguimiento de pendientes y como pedir flujos nuevos. Triggers: 'ayuda', 'que puedes hacer', 'comandos', 'instrucciones', 'como funciona esto', o primera apertura sin usuarios registrados."
 ---
 
 # Skill: Instrucciones
 
 **Trigger**: "ayuda", "¿qué puedes hacer?", "comandos", "instrucciones", "¿cómo funciona esto?",
-"¿qué sé hacer?", primera sesión (no existe ningún archivo en `memory/sessions/`)
+"¿qué sé hacer?", primera apertura sin usuarios registrados en `config/users.md`
 
 ---
 
@@ -14,7 +14,7 @@ description: "Presentar capacidades de Biank, frases de inicio/cierre y como ped
 
 Presenta el resumen de bienvenida a Biank. Usa el tono cálido de §2.
 
-Si es **primera sesión** (carpeta `memory/sessions/` vacía o inexistente):
+Si es **primera apertura** (no hay usuarios registrados en `config/users.md`):
 → Presenta la bienvenida completa sin que el usuario la pida.
 
 Si el usuario pregunta "ayuda" o "¿qué puedes hacer?":
@@ -43,18 +43,20 @@ Puedo ayudarte con estas áreas — solo dime lo que necesitas en español natur
 
 ---
 
-### Cómo iniciar y cerrar sesión correctamente
+### Cómo retomar el trabajo
 
-Para que recuerde lo que hiciste hoy:
+Abre la carpeta y dime **«Hola Biank»** o pide directamente lo que necesitas.
+Reviso los pendientes guardados y te traigo lo que toca hoy o está vencido.
 
-| Acción | Qué decir |
-|--------|-----------|
-| **Iniciar** | "hola biank", "buenos días", tu nombre, cualquier saludo |
-| **Cerrar** | **"adiós"**, "hasta luego", "chao biank", "nos vemos" |
+Los acuerdos, próximos pasos y comprobantes de un pendiente quedan en esa misma
+tarea. **No necesitas despedirte ni pedir que guarde una sesión** para conservar
+ese seguimiento. Puedes preguntar *«¿qué quedó pendiente?»* o *«¿qué acordamos con
+este cliente?»*. Las preferencias generales confirmadas pueden guardarse en una
+memoria breve local, sin copiar toda la conversación.
 
-> ⚠️ Importante: di **"adiós"** (o cualquier despedida) antes de cerrar la ventana.
-> Eso es lo que me avisa que debo guardar el resumen de la sesión en memoria.
-> Si cierras sin despedirte, la sesión no queda guardada.
+Un pendiente con fecha se revisa cuando vuelvas a trabajar conmigo. Un aviso fuera
+de la conversación sólo existe si se programa y confirma con una herramienta
+compatible; anotarlo no activa una notificación.
 
 ---
 

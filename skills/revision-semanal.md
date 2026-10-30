@@ -1,74 +1,67 @@
 ---
 name: revision-semanal
-description: "Auto-auditoria semanal de Biank: archiva pendientes cerrados, revisa salud del backlog (stale, vencidos), detecta trabajo REPETITIVO en las sesiones de la semana y propone al admin convertirlo en una habilidad nueva. Triggers: 'revision semanal', 'auditate', 'revisa tu semana', 'que aprendiste esta semana', o proactivamente al arrancar si han pasado 7+ dias desde la ultima revision (fecha en memory/context.md)."
+description: "Revisión semanal de pendientes: archiva cerrados, revisa vencidos y estancados, y propone flujos repetitivos con evidencia del backlog y fuentes autorizadas. Triggers: 'revision semanal', 'auditate', 'revisa tu semana', 'que aprendiste esta semana', o al arrancar si hay backlog y pasaron 7+ dias desde la revisión registrada en él."
 ---
 
-# Skill: Revisión Semanal (auto-auditoría)
+# Skill: Revisión semanal
 
 **Trigger**: "revisión semanal", "audítate", "revisa tu semana", "¿qué aprendiste
-esta semana?" — **o proactivamente**: al arrancar sesión, si la fecha de "Última
-revisión semanal" en `memory/context.md` tiene **7 días o más** (o no existe),
-ofrécela: *"Ya pasó una semana desde mi última revisión — ¿la corremos? Toma 2
-minutos y me ayuda a trabajar mejor para ustedes."* Si el usuario dice que no,
-no insistas — reofrece en la siguiente sesión.
+esta semana?". Al arrancar, si existe `memory/backlog.md` y su última revisión tiene
+7+ días, o no tiene fecha, ofrece una vez revisarlo. Si el usuario declina, no
+insistas. No necesita crear contexto, leer sesiones ni cerrar una conversación.
 
-> Es tu ritual de mantenimiento y aprendizaje. No requiere admin para correr,
-> pero **proponer habilidades nuevas sí se aprueba con el admin** (§4 de identidad).
+## Qué hacer
 
----
+### 1. Archivar tareas cerradas
 
-## Qué hace (4 pasos, en orden)
+Filas con más de 7 días en **hecho ✅**, acreditados por su fecha de cierre →
+muévelas a `memory/backlog_archivo.md`, preservando identificador, responsable,
+decisiones y referencias de evidencia. Verifica que quedaron completas antes de
+retirarlas del backlog activo; evita duplicar identificadores ya archivados.
+No inventes fechas: si no se conoce la fecha de cierre, conserva la fila.
+No elimines tareas abiertas, históricos, comprobantes ni archivos de sesiones.
 
-### 1. Archivar lo cerrado
+### 2. Revisar pendientes
 
-Filas del backlog con **más de 7 días en hecho ✅** → muévelas a
-`memory/backlog_archivo.md` con la fecha de cierre. Reporta: *"Archivé N
-pendientes cerrados."*
+- **Vencidos:** seguimiento en el pasado y tarea aún abierta → presenta el siguiente
+  paso y propone una nueva fecha o pregunta por el resultado; no cierres por intención.
+- **Estancados:** esperando sin movimiento comprobado en 14+ días → pregunta si hay
+  respuesta o hace falta escalar. Sin fecha de movimiento, no inventes la antigüedad.
+- **Incompletos:** falta responsable, próximo paso o fecha → propone completarlos.
+- **Duplicados:** conserva la tarea canónica y sus antecedentes; no borres filas
+  dudosas ni mezcles tareas distintas sin aclarar su relación.
 
-### 2. Salud del backlog
+Una confirmación precisa del usuario puede cerrar el seguimiento y queda citada
+como tal. No demuestra que una operación haya sido registrada en el ERP.
 
-- **Vencidos**: filas con "Seguir el" en el pasado y aún abiertas → tráelas:
-  *"Estos 3 seguimientos ya se pasaron de fecha — ¿los movemos o ya se resolvieron?"*
-- **Estancados**: filas en **esperando** sin movimiento en 14+ días → pregunta
-  si siguen vivas o hay que escalar.
-- **Sin fecha**: pendientes sin "Seguir el" → propón una fecha.
+### 3. Proponer mejoras con evidencia
 
-### 3. Cazar trabajo repetitivo (el paso de oro)
+Revisa las tareas pertinentes y sus referencias autorizadas. Consulta sólo los
+antecedentes necesarios para la pregunta; no recorras `memory/sessions/` ni el
+historial completo para alimentar esta revisión. Si hay evidencia de un mismo
+flujo repetido 3+ veces, propón documentarlo; no deduzcas repeticiones que no puedas
+comprobar ni crees una bitácora para conseguirlas.
 
-Lee las sesiones de la semana (`memory/sessions/` de los últimos 7 días) y busca
-**patrones que se repitieron 3+ veces**:
+Crear un protocolo requiere aprobación del admin y seguir `protocols/crear-flujo.md`.
+Si lo pide un operador, registra la propuesta en la tarea correspondiente para el
+admin. No acumules hipótesis o insights automáticos en `memory/context.md`.
 
-- La misma secuencia de consultas/operaciones (ej. "cada lunes piden ventas de
-  la semana + cartera vencida + saldo de caja" → eso es un *reporte de lunes*).
-- El mismo tipo de captura manual (ej. "3 veces esta semana subieron recibos y
-  pidieron extraer datos con los mismos campos").
-- La misma pregunta que requirió los mismos 4 pasos para responderse.
+### 4. Guardar lo útil
 
-Por cada patrón encontrado, **propón convertirlo en habilidad**:
+Actualiza las tareas afectadas sin crear otra tarea por haber revisado el backlog.
+Registra **Última revisión semanal: YYYY-MM-DD** en una única línea de metadatos del
+propio `memory/backlog.md`; sustituye la anterior, no agregues un historial de revisiones.
+La documentación local de esta revisión autorizada no pide otra confirmación; los
+cambios de negocio y protocolos conservan sus propias confirmaciones.
 
-> *"Noté que esta semana me pidieron 3 veces [X, con los mismos pasos]. ¿Quieren
-> que lo aprenda como flujo fijo? Así solo dirían '[frase corta]' y lo hago
-> completo de una."*
+Entrega un resumen de 3–5 líneas: qué se archivó, qué sigue pendiente y qué mejora
+se propuso. No generes un resumen de sesión aparte ni dependas de una despedida.
 
-- Si el usuario acepta y es **admin** → documenta el flujo en `protocols/`
-  siguiendo `protocols/crear-flujo.md`.
-- Si es **operador** → anota la propuesta en el backlog (fila "proponer
-  habilidad [X] al admin") y menciónala cuando el admin esté en sesión.
+## Límites
 
-### 4. Registrar y fechar
-
-- Insights de la semana que aún no estén en `memory/context.md` → agrégalos (§9).
-- Actualiza en `memory/context.md` la línea: `Última revisión semanal: YYYY-MM-DD`
-  (créala en "Notas operativas" si no existe).
-- Resumen final al usuario en 3-5 líneas: qué archivaste, qué está vencido,
-  qué propusiste aprender.
-
-## Reglas
-
-- **Máximo 5 minutos** de interacción — es mantenimiento, no ceremonia.
-- No propongas habilidades por cosas que pasaron **una sola vez** — el umbral
-  es repetición real (3+). Una herramienta que nadie pidió es ruido.
-- El paso 3 es **propuesta, no ejecución**: crear el protocolo requiere
-  aprobación del admin, siempre.
-- Todo en lenguaje de negocio: "pendientes", "seguimientos", "flujos" — nunca
-  "backlog", "skill" ni "auditoría" frente al usuario.
+- No más de 5 minutos de interacción ni propuestas por una ocurrencia aislada.
+- Memoria breve sólo para preferencias o hechos duraderos confirmados, bajo las
+  reglas de `identity/BIANK.md` §8; no se modifica por rutina semanal.
+- La revisión ocurre durante esta conversación. No promete avisos de fondo sin
+  una programación autorizada y confirmada.
+- Habla de pendientes, seguimientos y flujos, sin jerga interna de archivos.
