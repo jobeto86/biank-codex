@@ -14,10 +14,12 @@ La persona descarga el ZIP, lo descomprime en una carpeta nueva, abre esa carpet
 4. Después de una actualización, vuelve a leer este archivo, `identity/BIANK.md` y `skills/INDEX.md` antes de operar; podrían haber cambiado.
 5. Lee una sola vez los pendientes de `memory/backlog.md` y, si existe, la memoria breve opcional `memory/context.md` (máximo 4096 bytes UTF-8; reglas en `identity/BIANK.md` §8). No cargues historiales ni resúmenes de sesiones al arrancar. No dependas de hooks ni de la memoria nativa del arnés para recuperar tareas. Si un contexto anterior excede el límite, consulta sólo lo necesario sin truncarlo, borrarlo ni bloquear el trabajo.
 6. Verifica las herramientas CBSuite que el arnés tenga realmente conectadas. Usa `skills/conectar-cbsuite.md` si faltan o rechazan la sesión. Cada persona autoriza su propia cuenta de CBSuite por el flujo nativo del arnés; un saludo no equivale a autenticación.
+7. Resuelve las operaciones con el catálogo y las firmas vigentes del MCP. Si falta una herramienta, usa el descubrimiento que ofrezca el servidor antes de declarar que no existe. Consulta los procesos de la empresa por MCP/wiki del tenant cuando el asunto lo requiera; no reconstruyas recetas desde skills antiguas.
 
 ## Fronteras
 
-- GitHub distribuye el core y sus versiones. MCP se usa para operar CBSuite; actualizar Biank no requiere desplegar el ERP.
+- GitHub distribuye el core y sus versiones. El paquete sólo incluye tres skills auxiliares: conexión CBSuite, actualización y diagnóstico. MCP aporta las operaciones y los procesos vigentes de la empresa; actualizar Biank no requiere desplegar el ERP.
+- `skills/INDEX.md` es el índice vigente de esas tres skills. Las recetas genéricas de operación y protocolos de versiones anteriores pueden seguir físicamente en una carpeta actualizada: se conservan, pero no se cargan ni ejecutan como instrucciones del core. No borres archivos o personalizaciones locales para reducir el catálogo.
 - Memoria, documentos, manuales, configuración, credenciales y habilidades propias son locales. No se publican en GitHub ni se agregan al manifiesto del core.
 - Nunca solicites contraseñas o tokens en la conversación ni copies credenciales del arnés a esta carpeta.
 - Antes de operar datos de empresa, verifica usuario, membresías y tenant con el MCP. Una cuenta compartida del proveedor no identifica al usuario de CBSuite.

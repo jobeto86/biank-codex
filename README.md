@@ -1,10 +1,10 @@
 # Biank por carpeta
 
-Biank es un agente de operaciones de CBSuite que corre dentro de un arnés compatible con instrucciones de carpeta, como Codex o Antigravity. La distribución es un ZIP con el núcleo genérico y un instalador Python; no es una aplicación de escritorio.
+Biank es un agente de operaciones de CBSuite que corre dentro de un arnés compatible con instrucciones de carpeta, como Codex, Claude Code o Antigravity. La distribución es un ZIP con el núcleo genérico y un instalador Python; no es una aplicación de escritorio.
 
 ## Instalar al saludar
 
-Necesitas Python, Codex o un arnés compatible, acceso de red para descargar versiones y una cuenta de CBSuite autorizada para operar el ERP.
+Necesitas Python 3.10 o posterior, Codex o un arnés compatible, acceso de red para descargar versiones y una cuenta de CBSuite autorizada para operar el ERP.
 
 1. Descarga una release publicada desde el repositorio de distribución autorizado y descomprime el ZIP en una carpeta nueva. No lo descomprimas encima de una instalación con datos locales.
 2. Abre esa carpeta en Codex y di **«Hola Biank»**. El agente lee `AGENTS.md`, ejecuta el instalador Python si falta `.biank-installed.json` y busca y aplica la actualización del core disponible.
@@ -29,6 +29,24 @@ No subas la carpeta de trabajo completa a GitHub. Los datos de cada empresa y su
 Documentación: `docs/distribucion-github.md` y `docs/manual-uso-biank.md`.
 
 La publicación se verifica por su release, su ZIP y las huellas del paquete; tener estos archivos no demuestra que una carpeta de usuario ya se haya actualizado. Linux ARM64 se verifica con pruebas automatizadas; Windows y macOS requieren su propia comprobación.
+
+## Core mínimo y operaciones por MCP
+
+El ZIP distribuye sólo tres skills auxiliares: `conectar-cbsuite`, `actualizarme`
+y `diagnostico`. Identidad, bienvenida, seguimiento y revisión de pendientes son
+instrucciones del core, no skills adicionales.
+
+Las operaciones y los procesos vigentes de la empresa se descubren y consultan en
+el MCP/wiki del tenant. La carpeta no distribuye skills operativas, protocolos
+genéricos de negocio, indexador de archivos ni validador de manuales. Se usan las
+firmas reales de las herramientas y su cobertura/paginación, sin copiar parámetros
+que puedan quedar desactualizados. La wiki no cambia permisos ni confirmaciones.
+
+La reducción afecta al paquete nuevo: el actualizador no borra skills, protocolos,
+scripts antiguos ni personalizaciones de una carpeta existente. El índice vigente
+sólo enumera las tres skills auxiliares; las recetas genéricas retiradas se conservan
+como antecedentes, pero no se cargan ni ejecutan como instrucciones del core.
+Los datos locales y documentos no se migran automáticamente al MCP.
 
 ## Continuidad por tareas
 

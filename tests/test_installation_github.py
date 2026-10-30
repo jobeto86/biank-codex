@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -45,6 +46,47 @@ class InstallationTest(unittest.TestCase):
         self.assertIn('scripts/update.py', data)
         self.assertIn('setup.py', data)
         self.assertIn('AGENTS.md', data)
+        self.assertEqual({name for name in data if name.startswith('skills/')}, {
+            'skills/INDEX.md', 'skills/conectar-cbsuite.md',
+            'skills/actualizarme.md', 'skills/diagnostico.md',
+        })
+        self.assertFalse(any(name.startswith('protocols/') for name in data))
+        self.assertEqual({name for name in data if name.startswith('scripts/')},
+                         {'scripts/update.py'})
+
+    def test_reduced_core_preserves_retired_recipes_and_local_customizations(self):
+        target = self.root / 'existing-client'
+        _, current = u.validate_package(self.zipped.read_bytes())
+        previous = dict(current)
+        previous['VERSION'] = b'2026-09-30.1\n'
+        retired = {
+            'skills/consultar-caja.md': b'old generic operation recipe',
+            'protocols/receipt_capture.md': b'old generic receipt flow',
+        }
+        previous.update(retired)
+        old_metadata = {'schema': 1, 'version': '2026-09-30.1', 'repo': 'example/biank',
+                        'files': {name: hashlib.sha256(data).hexdigest()
+                                  for name, data in previous.items()}}
+        self.assertTrue(u.apply_package(target, old_metadata, previous))
+        local = {
+            'skills/custom.md': b'own instruction',
+            'manuales/company.md': b'own company document',
+            'memory/backlog.md': b'open task | owner | agreement',
+            'memory/context.md': 'Preferencia confirmada.\n'.encode() * 300,
+        }
+        # A client may have personalized a file formerly distributed by the core.
+        retired['skills/consultar-caja.md'] = b'client customization of retired path'
+        for name, content in {**local, **retired}.items():
+            path = target / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+        result = self.run_setup(target)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for name, content in {**local, **retired}.items():
+            self.assertEqual((target / name).read_bytes(), content)
+        installed = json.loads((target / '.biank-release.json').read_text())
+        for name in retired:
+            self.assertNotIn(name, installed['files'])
 
     def test_fresh_extracted_folder_installs_then_is_idempotent(self):
         result = self.run_setup(self.source)

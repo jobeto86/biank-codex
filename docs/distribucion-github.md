@@ -30,6 +30,24 @@ Una actualización sólo avanza de versión y sólo administra los paths del cor
 
 Compartir una cuenta del proveedor de modelos no garantiza aislamiento entre carpetas ni sustituye la autenticación de cada persona en CBSuite. El agente verifica perfil, membresías y tenant antes de operar con el MCP.
 
+## Core mínimo y operaciones por MCP
+
+El ZIP distribuye sólo tres skills auxiliares: `conectar-cbsuite`, `actualizarme`
+y `diagnostico`. Identidad, bienvenida, seguimiento y revisión de pendientes son
+instrucciones del core, no skills adicionales.
+
+Las operaciones y los procesos vigentes de la empresa se descubren y consultan en
+el MCP/wiki del tenant. La carpeta no distribuye skills operativas, protocolos
+genéricos de negocio, indexador de archivos ni validador de manuales. Se usan las
+firmas reales de las herramientas y su cobertura/paginación, sin copiar parámetros
+que puedan quedar desactualizados. La wiki no cambia permisos ni confirmaciones.
+
+La reducción afecta al paquete nuevo: el actualizador no borra skills, protocolos,
+scripts antiguos ni personalizaciones de una carpeta existente. El índice vigente
+sólo enumera las tres skills auxiliares; las recetas genéricas retiradas se conservan
+como antecedentes, pero no se cargan ni ejecutan como instrucciones del core.
+Los datos locales y documentos no se migran automáticamente al MCP.
+
 ## Continuidad por tareas
 
 `memory/backlog.md` concentra los pendientes con responsable, próximo paso, fecha,

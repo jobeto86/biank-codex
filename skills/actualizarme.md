@@ -21,4 +21,6 @@ Si falla una consulta o descarga y no queda `.biank-update-journal.json`, conser
 
 No pidas credenciales de GitHub ni de CBSuite por chat. Si la fuente requiere un acceso que no está disponible, informa el bloqueo al administrador. No cambies de repositorio ni modifiques configuraciones del arnés para resolverlo.
 
-Las habilidades propias de la empresa se guardan como archivos separados, fuera de los nombres que el core distribuye. No edites una skill del core para guardar datos de un cliente: la siguiente versión puede reemplazarla.
+El índice vigente sólo enumera tres skills auxiliares: conexión CBSuite, actualización y diagnóstico. El paquete nuevo no distribuye recetas de operación ni protocolos de negocio; las operaciones y procesos se resuelven con el MCP/wiki del tenant.
+
+La reducción del paquete no borra archivos retirados ni personalizaciones de instalaciones anteriores. Conserva esos archivos como antecedentes, pero no cargues ni ejecutes recetas genéricas del core retirado. No edites una skill del core para guardar datos de un cliente: la siguiente versión puede reemplazarla.
